@@ -1,0 +1,701 @@
+<!-- Start Header Section-->
+<section
+  class="fixed-top lg:px-16 px-6 bg-transparent border-b-[1px] border-b-gray-500 flex flex-wrap items-center lg:py-0 py-2 h-24">
+  <div class="flex-1 flex justify-between items-center">
+    <a href="#" class="text-white font-bold text-center">
+      COFFEE<br><span class="text-xs space-x-1">BLEND</span>
+    </a>
+  </div>
+
+  <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-gray-900"
+      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+      <title>menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  </label>
+
+  <input class="hidden" type="checkbox" id="menu-toggle" />
+
+  <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+    <nav>
+      <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+        <li><a class="text-sm text-amber-800 lg:p-4 mx-3 py-3 px-0 block font-semibold" href="#">HOME</a>
+        </li>
+        <li><a class="text-white text-sm lg:p-4 py-3 mx-3 px-0 block hover:text-amber-800" href="#">MENU</a>
+        </li>
+        <li><a class="text-white text-sm lg:p-4 py-3 mx-3 px-0 block hover:text-amber-800 lg:mb-0 mb-2"
+            href="#">SERVICES</a></li>
+        <li><a class="text-white text-sm lg:p-4 py-3 mx-3 px-0 block hover:text-amber-800" href="#">BLOG</a>
+        </li>
+        <li><a class="text-white text-sm lg:p-4 py-3 mx-3 px-0 block hover:text-amber-800" href="#">ABOUT</a>
+        </li>
+        <li (click)="toggle()" class=" mx-3 relative hover:text-amber-800">
+          <div class="relative w-fit px-4 py-2 border-none rounded-md flex justify-center items-center cursor-pointer">
+            <div class="mr-2 text-sm text-white">
+              SHOP
+            </div>
+            <fa-icon [icon]="faCaretDown" class="text-xs mb-1 text-white"></fa-icon>
+          </div>
+          <div *ngIf="Show"
+            class="z-10 absolute w-fit py-1 mt-2 border border-1 border-neutral-400 rounded-md cursor-pointer">
+            <div class="py-2 px-4 w-full hover:bg-neutral-100">
+              Item 1
+            </div>
+            <div class="py-2 px-4 w-full hover:bg-neutral-100">
+              Item 2
+            </div>
+            <div class="py-2 px-4 w-full hover:bg-neutral-100">
+              Item 3
+            </div>
+            <div class="py-2 px-4 w-full hover:bg-neutral-100">
+              Item 4
+            </div>
+          </div>
+        </li>
+        <li><a class="text-white text-sm lg:p-4 py-3 px-0 block hover:text-amber-800" href="#">ABOUT</a>
+        </li>
+        <li>
+          <a class="lg:p-4 py-3 px-0 block" href="#">
+
+            <div class="m-0 inline-flex relative w-fit">
+              <div
+                class="absolute inline-block top-0 right-0 translate-x-4 -translate-y-3 rounded-full w-5 h-5 leading-3 p-1 text-center text-xs bg-orange-400 z-10">
+                <span>1</span>
+              </div>
+              <div>
+                <fa-icon [icon]="faCartShopping" class="text-xl text-white"></fa-icon>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</section>
+
+<!-- Start Carousel Section-->
+<section>
+  <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark relative" data-bs-ride="carousel">
+    <!--  Indicators -->
+    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+      <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1" aria-label="Slide 1"></button>
+      <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2" aria-label="Slide 1"></button>
+    </div>
+
+    <!-- Inner -->
+    <div class="carousel-inner relative w-full overflow-hidden">
+      <!-- Single item -->
+      <div class="carousel-item active relative float-left w-full">
+        <img src="../assets/1.webp" class="block w-full bg-fixed" alt="Motorbike Smoke" />
+        <div class="carousel-caption hidden md:block absolute text-center md:top-60 w-70">
+          <span class="text-4xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Welcome</span>
+          <h1 class="my-5 text-6xl text-white">Creamy Hot and Ready to <br> Serve</h1>
+          <p class="text-xl text-[#dddcdc]">A small river named Duden flows by their place and supplies it with the
+            necessary <br> regelialia.</p>
+
+          <button
+            class=" mr-5 mt-5 border-2 border-[#C49B63] bg-[#C49B63] hover:text-[#C49B63] hover:bg-transparent transition-all px-3 py-1 text-black">
+            Order Now
+          </button>
+          <button
+            class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-black transition-all px-3 py-1 text-[#C49B63]">
+            View Menu
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Single item -->
+      <div class="carousel-item relative float-left w-full">
+        <img src="../assets/2.webp" class="block w-full bg-fixed" alt="Mountaintop" />
+        <div class="carousel-caption hidden md:block absolute text-center md:top-60 w-70">
+          <span class="text-4xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Welcome</span>
+          <h1 class="my-4 text-6xl text-white">Amazing Taste & Beautiful <br> Place</h1>
+          <p class="text-xl text-[#dddcdc]">A small river named Duden flows by their place and supplies it with the
+            necessary <br> regelialia.</p>
+
+          <button
+            class=" mr-5 mt-5 border-2 border-[#C49B63] bg-[#C49B63] hover:text-[#C49B63] hover:bg-transparent transition-all px-3 py-1 text-black">
+            Order Now
+          </button>
+          <button
+            class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-black transition-all px-3 py-1 text-[#C49B63]">
+            View Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- Single item -->
+      <div class="carousel-item relative float-left w-full">
+        <img src="../assets/3.webp" class="block w-full bg-fixed" alt="Woman Reading a Book" />
+        <div class="carousel-caption hidden md:block absolute text-center md:top-60 w-70">
+          <span class="text-4xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Welcome</span>
+          <h1 class="my-5 text-6xl text-white">Creamy Hot and Ready to <br> Serve</h1>
+          <p class="text-xl text-[#dddcdc]">A small river named Duden flows by their place and supplies it with the
+            necessary <br> regelialia.</p>
+
+          <button
+            class=" mr-5 mt-5 border-2 border-[#C49B63] bg-[#C49B63] hover:text-[#C49B63] hover:bg-transparent transition-all px-3 py-1 text-black">
+            Order Now
+          </button>
+          <button
+            class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-black transition-all px-3 py-1 text-[#C49B63]">
+            View Menu
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Inner -->
+  </div>
+</section>
+<!-- End Carousel-->
+<!-- End Header Section-->
+<!-- ------------------------------------------------------------------ -->
+
+<div class="grid grid-cols-12 bg-black pt-6 ">
+  <div class=" col-span-full md:col-span-full lg:col-span-3 mx-auto">
+    <div class="flex">
+      <fa-icon class="text-1xl  text-[#C49B63] mr-3" [icon]="faPhone"></fa-icon>
+      <p class="text-white">000 (123) 456 7890</p>
+    </div>
+    <p class="text-sm  ml-6 mt-3 text-slate-500">A small river named Duden <br> flows by their place and <br> supplies
+    </p>
+  </div>
+  <div class=" col-span-full md:col-span-full lg:col-span-2 mx-auto">
+    <div class="flex">
+      <fa-icon class="text-1xl  text-[#C49B63] mr-3" [icon]="faLocation"></fa-icon>
+      <p class="text-white">198 West 21th Street</p>
+    </div>
+    <p class="text-sm  ml-6 mt-3 text-slate-500">203 Fake St. Mountain View, <br> San Francisco, California, <br> USA
+    </p>
+  </div>
+  <div class=" col-span-full md:col-span-full lg:col-span-2 mx-auto">
+    <div class="flex">
+      <fa-icon class="text-1xl  text-[#C49B63] mr-3" [icon]="faClock"></fa-icon>
+      <p class="text-white">Open Monday-Friday</p>
+    </div>
+    <p class="text-sm  ml-6 mt-3 text-slate-500">8:00am - 9:00pm</p>
+  </div>
+
+
+  <div class="lg:col-span-5 mx-auto bg-[#C49B63] py-5 col-span-full md:col-span-full  lg:mt-[-150px] z-10">
+    <h1 class="text-4xl pl-3 text-white">Book a Table</h1>
+    <div>
+      <input class="bg-transparent placeholder-white m-3 border-b-[1px]  border-white outline-none" type="text"
+        placeholder="email">
+      <input class="bg-transparent border-b-[1px]  placeholder-white border-white outine-none" type="text"
+        placeholder="name">
+    </div>
+    <div>
+      <input class="bg-transparent m-3 placeholder-white border-b-[1px] border-white  outline-none" type="text"
+        placeholder="date">
+      <input class="bg-transparent m-3 placeholder-white border-b-[1px] border-white  outline-none" type="text"
+        placeholder="time">
+      <input class=" border-white bg-transparent  placeholder-white border-b-[1px] outline-none" type="text"
+        placeholder="phone">
+    </div>
+    <div>
+      <textarea name="" class="bg-transparent placeholder-white m-3 border-b-[1px] border-white  outline-none"
+        placeholder="Message" id="" cols="30" rows="2"></textarea>
+      <button
+        class=" border-2 border-[#C49B63] bg-white text-black transition-all px-10 py-3 hover:bg-black hover:border-black hover:text-white">
+        Appointment
+      </button>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- -------------------------------------------- -->
+
+<div class="grid grid-cols-12">
+  <div class="col-span-12 lg:col-span-6"
+    style="background-size: cover; background-image:url(https://preview.colorlib.com/theme/coffeeblend/images/xabout.jpg.pagespeed.ic.1CZ91rANlw.webp); ">
+  </div>
+  <div class="col-span-12 lg:col-span-6 py-32"
+    style="background-image:url(https://preview.colorlib.com/theme/coffeeblend/images/xbg_4.jpg.pagespeed.ic.jZaRfvTz2Z.webp) ;">
+    <div class="py-7 px-3 lg:ml-[-200px] lg:w-[650px] bg-[#000000]">
+      <p class="font-semibold text-3xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">
+        Discover</p>
+      <h1 class="text-4xl active font-bold text-white">OUR STORY</h1>
+      <p class=" text-[#808080] leading-7 my-4">On her way she met a copy. The copy warned the Little Blind Text, that
+        <br> where it came from it would have been rewritten a thousand times and <br> everything that was left from its
+        origin would be the word "and" and <br>  the Little Blind Text should turn around and return to its own, safe
+        country. But <br> nothing the copy said could convince her and so it didn’t take long until a <br> few insidious
+        Copy Writers ambushed her, made her drunk with Longe and <br> Parole and dragged her into their agency, where
+        they abused her for their.</p>
+    </div>
+  </div>
+</div>
+
+<!-- --------------------------------------- -->
+<div class="grid grid-cols-12  text-center bg-[#C49B63] py-28">
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-4 mx-auto my-4">
+
+    <fa-icon class="text-5xl border-2 p-2  border-black" [icon]="faList"></fa-icon>
+
+    <div class="mt-9">
+      <h1 class="mb-5 font-bold">EASY TO ORDER</h1>
+      <p class=" text-[#1D150B]  text-[1.125rem]">Even the all-powerful Pointing has no<br> about the blind texts it is
+        an almost <br> unorthographic.</p>
+    </div>
+  </div>
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-4  mx-auto my-4">
+
+    <fa-icon class="text-5xl border-2 p-2  border-black" [icon]="faTruck"></fa-icon>
+
+    <div class="mt-9">
+      <h1 class="mb-5 font-bold">FASTEST DELIVERY</h1>
+      <p class=" text-[#1D150B]  text-[1.125rem]">Even the all-powerful Pointing has no<br> about the blind texts it is
+        an almost <br> unorthographic.</p>
+    </div>
+  </div>
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-4  mx-auto my-4">
+    <fa-icon class="text-5xl border-2 p-2  border-black" [icon]="faCoffee"></fa-icon>
+    <div class="mt-9">
+      <h1 class="mb-5 font-bold">QUALITY COFFEE</h1>
+      <p class=" text-[#1D150B]  text-[1.125rem]">Even the all-powerful Pointing has no<br> about the blind texts it is
+        an almost <br> unorthographic.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------- -->
+
+<div class="fullContainer">
+  <div class="grid grid-cols-12 gap-4 pt-20 pb-20 bg-fixed" style="background-image: url(assets/4.webp);">
+    <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-6 text-center lg:text-right">
+      <div class="py-7">
+        <p class="font-semibold text-3xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">
+          Discover</p>
+        <h1 class="text-4xl active font-bold text-white">OUR MENU</h1>
+        <p class=" text-[#808080] leading-7 my-4">Far far away, behind the word mountains, far from the
+          countries<br> Vokalia and
+          Consonantia, there live the blind texts. Separated they<br> live in Bookmarksgrove
+          right at the coast of the Semantics, a large <br>language ocean.</p>
+        <div class="buttons my-8">
+          <button
+            class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-6 py-3 text-[#C49B63]">
+            View Full Menu
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="grid lg:grid-rows-2 grid-row-2 col-span-12 mx-auto md:col-span-6 lg:col-span-3">
+      <div class="text-white lg:flex">
+        <img class="lg:w-[300px] m-4  h-44" src="assets/5.webp" alt="">
+        <img class="lg:w-[300px] h-44" src="assets/6.webp" alt="">
+      </div>
+      <div class="text-white lg:flex">
+        <img class="lg:w-[300px] m-4  h-44" src="assets/7.webp" alt="">
+        <img class="lg:w-[300px] h-44" src="assets/8.webp" alt="">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------ -->
+
+<div class="grid grid-cols-12 gap-4 text-center bg-no-repeat bg-cover bg-fixed py-14"
+  style="background-image: url(assets/6.webp);">
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3 mx-auto my-4">
+    <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3  my-4">
+      <fa-icon class="text-5xl border-2 p-2 text-[#C49B63]  border-[#C49B63]" [icon]="faCoffee"></fa-icon>
+    </div>
+    <div>
+      <h1 class="font-extrabold text-2xl my-4 text-[#C49B63]">100</h1>
+      <p class="text-sm text-white font-extrabold">Coffee Branches</p>
+    </div>
+  </div>
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3 mx-auto my-4">
+    <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3  my-4">
+      <fa-icon class="text-5xl border-2 p-2 text-[#C49B63]  border-[#C49B63]" [icon]="faCoffee"></fa-icon>
+    </div>
+    <div>
+      <h1 class="font-extrabold text-2xl my-4 text-[#C49B63]">85</h1>
+      <p class="text-sm text-white font-extrabold">Number of Awards</p>
+    </div>
+  </div>
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3 mx-auto my-4">
+    <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3  my-4">
+      <fa-icon class="text-5xl border-2 p-2 text-[#C49B63]  border-[#C49B63]" [icon]="faCoffee"></fa-icon>
+    </div>
+    <div>
+      <h1 class="font-extrabold text-2xl my-4 text-[#C49B63]">10,567</h1>
+      <p class="text-sm text-white font-extrabold">Happy Customer</p>
+    </div>
+  </div>
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-3 mx-auto my-4">
+    <div>
+      <fa-icon class="text-5xl border-2 p-2 text-[#C49B63]  border-[#C49B63]" [icon]="faCoffee"></fa-icon>
+    </div>
+    <div>
+      <h1 class="font-extrabold text-2xl my-4 text-[#C49B63]">900</h1>
+      <p class="text-sm text-white font-extrabold">Staff</p>
+    </div>
+  </div>
+</div>
+
+<!-- *----------------------------------------------- -->
+<div class="bg-fixed" style="background-image: url(assets/4.webp);">
+  <div class="text-center pt-32">
+    <p class="font-semibold text-3xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Discover</p>
+    <h1 class="text-4xl active font-bold text-white">BEST COFFEE SELLERS</h1>
+    <p class="text-sm text-slate-400 my-4">Far far away, behind the word mountains, far from the countries Vokalia and
+      <br>
+      Consonantia, there live the blind texts.
+    </p>
+  </div>
+  <div class="grid grid-cols-12 gap-4 text-center mt-20 mx-auto pb-16">
+    <div class="col-span-2"> </div>
+
+    <div class="col-span-12 md:col-span-12 lg:col-span-2 mx-auto">
+      <img src="assets/5.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">COFFEE CAPUCCINO</h1>
+      <p class="text-sm text-slate-400 my-5">A small river named Duden flows <br>
+        by their place and supplies </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-12  md:col-span-12 lg:col-span-2 mx-auto">
+      <img src="assets/6.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">COFFEE CAPUCCINO</h1>
+      <p class="text-sm text-slate-400 my-5">A small river named Duden flows <br>
+        by their place and supplies </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-12 md:col-span-12 lg:col-span-2 mx-auto">
+      <img src="assets/7.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">COFFEE CAPUCCINO</h1>
+      <p class="text-sm text-slate-400 my-5">A small river named Duden flows <br>
+        by their place and supplies </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-12 md:col-span-12 lg:col-span-2 mx-auto">
+      <img src="assets/8.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">COFFEE CAPUCCINO</h1>
+      <p class="text-sm text-slate-400 my-5">A small river named Duden flows <br>
+        by their place and supplies </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-2"> </div>
+  </div>
+</div>
+
+<!-- ----------------------------------------- -->
+
+<div class="grid grid-cols-12">
+  <img class="lg:col-span-3 col-span-12 h-full" src="assets/9.webp" alt="">
+  <img class="lg:col-span-3 col-span-12 h-full" src="assets/10.webp" alt="">
+  <img class="lg:col-span-3 col-span-12 h-full" src="assets/11.webp" alt="">
+  <img class="lg:col-span-3 col-span-12 h-full" src="assets/12.webp" alt="">
+</div>
+
+<!-- ----------------------------------------- -->
+
+<div class="bg-fixed" style="background-image: url(assets/4.webp);">
+  <div class="text-center pt-32">
+    <p class="font-semibold text-3xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Discover</p>
+    <h1 class="text-4xl active font-bold text-white">OUR PRODUCTS</h1>
+    <p class="text-sm text-slate-400 my-4">Far far away, behind the word mountains, far from the countries Vokalia and
+      <br>
+      Consonantia, there live the blind texts.
+    </p>
+  </div>
+  <div class="text-center mx-auto ">
+    <button class=" mx-2 border-2 border-[#C49B63] bg-[#C49B63] text-black transition-all px-3 py-1">
+      Main Dishes
+    </button>
+    <button
+      class=" mx-2 border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+      Drinks
+    </button>
+    <button
+      class=" mx-2 border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+      Desserts
+    </button>
+  </div>
+  <div class="grid grid-cols-12 gap-4 text-center mt-20 mx-auto">
+    <div class="col-span-1"> </div>
+
+    <div class="col-span-12 md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/15.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">GRILLED BEEF</h1>
+      <p class="text-sm text-slate-400 my-5">Far far away, behind the word mountains, <br> far from the countries
+        Vokalia and <br> Consonantia </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-12  md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/14.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">GRILLED BEEF</h1>
+      <p class="text-sm text-slate-400 my-5">Far far away, behind the word mountains, <br> far from the countries
+        Vokalia and <br> Consonantia </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-12 md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/15.webp" alt="">
+      <h1 class="font-extrabold text-white my-2">GRILLED BEEF</h1>
+      <p class="text-sm text-slate-400 my-5">Far far away, behind the word mountains, <br> far from the countries
+        Vokalia and <br> Consonantia </p>
+      <p class="text-white my-5">$5.90</p>
+      <button
+        class=" border-2 border-[#C49B63] hover:bg-[#C49B63] hover:text-white transition-all px-3 py-1 text-[#C49B63]">
+        Add To Cart
+      </button>
+
+    </div>
+    <div class="col-span-1"> </div>
+  </div>
+</div>
+
+<!-- -*--------------------------- -->
+
+<div class="bg-fixed" style="background-image: url(assets/16.webp);">
+
+  <div class="text-center pt-32 pb-20">
+    <p class="font-semibold text-3xl text-[#C49B63]" style="font-family: 'Great Vibes', cursive;">Testimony</p>
+    <h1 class="text-4xl active font-bold text-white">CUSTOMERS SAYS</h1>
+    <p class="text-sm text-slate-400 my-4">Far far away, behind the word mountains, far from the countries Vokalia and
+      <br>
+      Consonantia, there live the blind texts.
+    </p>
+  </div>
+  <div class="grid grid-cols-12">
+    <div class="col-span-12 lg:col-span-3 p-4 border-2 border-[#C49B63] bg-[#C49B63]">
+      <p class="text-white">“Even the all-powerful Pointing has no control about the blind texts it is an almost
+        unorthographic life One day however a small.”</p>
+      <div class="block lg:flex mt-5">
+        <img class="mr-3 w-14 h-14 rounded-full"
+          src="https://preview.colorlib.com/theme/coffeeblend/images/xperson_2.jpg.pagespeed.ic.ci-Lds-u9Y.webp" alt="">
+        <div>
+          <h5 class="text-white">Louise Kelly</h5>
+          <p class="text-slate-300 text-sm">
+            Illustrator Designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-12 lg:col-span-3 p-4 border-2 border-[#C49B63] bg-[#C49B63]">
+      <p class="text-white">“Even the all-powerful Pointing has no control about the blind texts it is an almost
+        unorthographic life One day however a small.”</p>
+      <div class="block lg:flex mt-5">
+        <img class="mr-3 w-14 h-14 rounded-full"
+          src="https://preview.colorlib.com/theme/coffeeblend/images/xperson_2.jpg.pagespeed.ic.ci-Lds-u9Y.webp" alt="">
+        <div>
+          <h5 class="text-white">Louise Kelly</h5>
+          <p class="text-slate-300 text-sm">
+            Illustrator Designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-12 lg:col-span-3 p-4 border-2 border-[#C49B63] bg-[#C49B63]">
+      <p class="text-white">“Even the all-powerful Pointing has no control about the blind texts it is an almost
+        unorthographic life One day however a small.”</p>
+      <div class="block lg:flex mt-5">
+        <img class="mr-3 w-14 h-14 rounded-full"
+          src="https://preview.colorlib.com/theme/coffeeblend/images/xperson_2.jpg.pagespeed.ic.ci-Lds-u9Y.webp" alt="">
+        <div>
+          <h5 class="text-white">Louise Kelly</h5>
+          <p class="text-slate-300 text-sm">
+            Illustrator Designer</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-12 lg:col-span-3 p-4 border-2 border-[#C49B63] bg-[#C49B63]">
+      <p class="text-white">“Even the all-powerful Pointing has no control about the blind texts it is an almost
+        unorthographic life One day however a small.”</p>
+      <div class="block lg:flex mt-5">
+        <img class="mr-3 w-14 h-14 rounded-full"
+          src="https://preview.colorlib.com/theme/coffeeblend/images/xperson_2.jpg.pagespeed.ic.ci-Lds-u9Y.webp" alt="">
+        <div>
+          <h5 class="text-white">Louise Kelly</h5>
+          <p class="text-slate-300 text-sm">
+            Illustrator Designer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- --------------------------------------------- -->
+
+
+
+<div class="bg-fixed" style="background-image: url(assets/4.webp);">
+  <div class="text-center pt-32">
+    <h1 class="text-4xl active font-bold text-white">RECENT FROM BLOG</h1>
+    <p class="text-sm text-slate-400 my-4">Far far away, behind the word mountains, far from the countries Vokalia and
+      <br>
+      Consonantia, there live the blind texts.
+    </p>
+  </div>
+  <div class="grid grid-cols-12 gap-4 mt-20 mx-auto">
+    <div class="col-span-1"> </div>
+
+    <div class="col-span-12 md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/17.webp" alt="">
+      <p class="text-[#777777] my-4">Sept 10, 2018 Admin <fa-icon class="text-sm p-2" [icon]="faMessage"></fa-icon> 3
+      </p>
+      <h1 class="font-extrabold text-white my-2">The Delicious Pizza</h1>
+      <p class="text-sm text-[#777777] my-5">A small river named Duden flows by their place <br> and supplies it with
+        the necessary regelialia. </p>
+    </div>
+    <div class="col-span-12  md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/18.webp" alt="">
+      <p class="text-[#777777] my-4">Sept 10, 2018 Admin <fa-icon class="text-sm p-2" [icon]="faMessage"></fa-icon> 3
+      </p>
+      <h1 class="font-extrabold text-white my-2">The Delicious Pizza</h1>
+      <p class="text-sm text-[#777777] my-5">A small river named Duden flows by their place <br> and supplies it with
+        the necessary regelialia. </p>
+    </div>
+    <div class="col-span-12 md:col-span-12 lg:col-span-3 mx-auto ">
+      <img class="h-[50%]" src="assets/19.webp" alt="">
+      <p class="text-[#777777] my-4">Sept 10, 2018 Admin <fa-icon class="text-sm p-2" [icon]="faMessage"></fa-icon> 3
+      </p>
+      <h1 class="font-extrabold text-white my-2">The Delicious Pizza</h1>
+      <p class="text-sm text-[#777777] my-5">A small river named Duden flows by their place <br> and supplies it with
+        the necessary regelialia. </p>
+    </div>
+    <div class="col-span-1"> </div>
+  </div>
+</div>
+
+<!-- ---------------------------------- -->
+
+<div class="grid grid-cols-12 bg-black pb-24">
+  <div class="col-span-12 lg:col-span-6">
+    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+        href="https://www.gps.ie/wearable-gps/">wearable trackers</a></iframe>
+  </div>
+  <div class=" text-white col-span-12 lg:col-span-6 mx-6 my-6">
+    <h1 class="text-4xl">Book a Table</h1>
+    <div>
+      <input class="bg-transparent m-3 border-b-2  border-slate-700 outline-none" type="text" placeholder="email">
+      <input class="bg-transparent border-b-2 outl border-slate-700 ine-none" type="text" placeholder="name">
+    </div>
+    <div>
+      <input class="bg-transparent m-3  border-b-2 border-slate-700  outline-none" type="text" placeholder="date">
+      <input class="bg-transparent m-3  border-b-2 border-slate-700  outline-none" type="text" placeholder="time">
+      <input class=" border-slate-700 bg-transparent  border-b-2 outline-none" type="text" placeholder="phone">
+    </div>
+    <div>
+      <textarea name="" class="bg-transparent  m-3 border-b-2 border-slate-700  outline-none" placeholder="Message"
+        id="" cols="30" rows="2"></textarea>
+      <button
+        class=" border-2 border-[#C49B63] bg-[#C49B63] text-black transition-all px-10 py-3 hover:bg-transparent hover:border-[#c49B63] hover:text-[#c49B63]">
+        Appointment
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ----------- -->
+<div class="grid grid-cols-12 bg-black">
+
+
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-4  my-4">
+    <div>
+      <h1 class="font-extrabold pb-4 text-white">About Us</h1>
+      <p class="text-sm text-slate-400 ">Far far away, behind the word <br> mountains, far from the <br> countries
+        Vokalia and <br> Consonantia, there live the <br> blind texts.</p>
+    </div>
+  </div>
+
+
+  <div class="col-span-full md:col-span-12 lg:col-span-3">
+    <div>
+      <h1 class="font-extrabold mb-4 text-white">RECENT BLOG</h1>
+      <div class="flex">
+        <img class="h-[70px] w-[70px] mr-3" src="assets/20.webp" alt="">
+        <div>
+          <p class="mb-3 text-white">Even the all-powerful Pointing has <br> no control about</p>
+          <p class="text-white mb-4"> Sept 15, 2018 Admin 19</p>
+        </div>
+      </div>
+      <div class="flex">
+        <img class="h-[70px] w-[70px] mr-3" src="assets/21.webp" alt="">
+        <div>
+          <p class="mb-3 text-white">Even the all-powerful Pointing has <br> no control about</p>
+          <p class="text-white mb-4"> Sept 15, 2018 Admin 19</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-1   my-4">
+    <div>
+      <h1 class="font-extrabold mb-4 text-white">SERVICES</h1>
+      <ul class="text-slate-400">
+        <li>Cooked</li>
+        <li>Deliver</li>
+        <li>Quality Food</li>
+        <li>Mixed</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-span-full md:px-24 md:col-span-12 lg:col-span-4   my-4">
+    <div>
+      <h1 class="font-extrabold mb-4">Contact</h1>
+      <ul class="text-slate-400">
+        <li class="mb-2">
+          <fa-icon class="text-1xl mr-2" [icon]="faLocation"></fa-icon> 203 Fake St. Mountain View, <br> San Francisco,
+          California, <br> USA
+        </li>
+        <li class="mb-2">
+          <fa-icon class="text-1xl mr-2" [icon]="faPhone"></fa-icon> +2 392 3929 210
+        </li>
+        <li class="mb-2">
+          <fa-icon class="text-1xl mr-2" [icon]="faEnvelope"></fa-icon> info@Cololib
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p class="text-center  bg-black text-white ">Copyright ©2022 All rights reserved | This template is made with &#10084;
+  &#65039; by Asmaa Adel</p>
