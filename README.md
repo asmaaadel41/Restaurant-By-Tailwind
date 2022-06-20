@@ -1,1 +1,1 @@
-# Restaurant using tailwind
+# Restaurant using Angular with Tailwind
